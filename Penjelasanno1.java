@@ -5,66 +5,39 @@ import java.util.Stack;
 public class no1 {
 
     public static void main(String[] args) {
-        // Membuat tumpukan (stack) data yang berisi bilangan desimal (Double)
+        // Membuat objek stack untuk menyimpan nilai-nilai
         Stack<Double> data = new Stack<>();
+        // Array nilai-nilai yang akan diolah
+        double[] nilai = {91.35, 4.72, 26.0, 3.5, 8.0, 61.0, 65.36, 12.0, 5.6, 7.11,
+            27.0, 9.53, 549.0, 2.23, 17.31, 4.25, 2.13, 83.0, 7.0, 102.4,
+            53.21, 3.42, 0.21, 70.02, 819.4, 6173.0, 4.25, 19.8, 17.35, 5.768};
 
-        // Menambahkan elemen-elemen ke dalam tumpukan
-        data.push(91.35);
-        data.push(4.72);
-        data.push(26.0);
-        data.push(3.5);
-        data.push(8.0);
-        data.push(61.0);
-        data.push(65.36);
-        data.push(12.0);
-        data.push(5.6);
-        data.push(7.11);
-        data.push(27.0);
-        data.push(9.53);
-        data.push(549.0);
-        data.push(2.23);
-        data.push(17.31);
-        data.push(4.25);
-        data.push(2.13);
-        data.push(83.0);
-        data.push(7.0);
-        data.push(102.4);
-        data.push(53.21);
-        data.push(3.42);
-        data.push(0.21);
-        data.push(70.02);
-        data.push(819.4);
-        data.push(6173.0);
-        data.push(4.25);
-        data.push(19.8);
-        data.push(17.35);
-        data.push(5.768);
-
-        // Inisialisasi variabel untuk nilai minimum, maksimum, dan jumlah
+        // Variabel untuk menyimpan nilai minimum, maksimum, dan jumlah
         double min = Double.MAX_VALUE;
         double max = Double.MIN_VALUE;
         double sum = 0;
 
-        // Menyimpan ukuran tumpukan sebelum mulai mengeluarkan elemen-elemennya
-        int size = data.size(); 
+        // Menyimpan nilai-nilai ke dalam stack
+        for (int i = 0; i < nilai.length; i++) {
+            data.push(nilai[i]);
+        }
 
-        // Mengambil dan memproses setiap elemen dari tumpukan sampai tumpukan kosong
-        while (!data.isEmpty()) {
-            double value = data.pop(); // Mengambil elemen teratas dari tumpukan
-
-            // Memperbarui nilai minimum jika nilai yang diambil lebih kecil dari nilai minimum sebelumnya
+        // Mengiterasi melalui nilai-nilai pada stack
+        for (double value : data) {
+            // Memeriksa dan memperbarui nilai minimum
             if (value < min) {
                 min = value;
             }
-            // Memperbarui nilai maksimum jika nilai yang diambil lebih besar dari nilai maksimum sebelumnya
+            // Memeriksa dan memperbarui nilai maksimum
             if (value > max) {
                 max = value;
             }
-            sum += value; // Menambahkan nilai yang diambil ke dalam jumlah
+            // Menghitung jumlah semua nilai
+            sum += value;
         }
 
-        // Menghitung rata-rata dari semua nilai dalam tumpukan
-        double average = sum / size; 
+        // Menghitung rata-rata dari semua nilai
+        double average = sum / data.size();
 
         // Menampilkan hasil
         System.out.println("Min     : " + min);

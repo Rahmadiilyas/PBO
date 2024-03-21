@@ -1,70 +1,44 @@
+package praktikum3;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class no2 {
 
     public static void main(String[] args) {
-        // Membuat antrian (queue) data yang berisi bilangan desimal (Double)
+        // Membuat objek Queue menggunakan LinkedList untuk menyimpan data nilai
         Queue<Double> data = new LinkedList<>();
+        
+        // Array nilai yang akan dimasukkan ke dalam Queue
+        double[] nilai = {91.35, 4.72, 26.0, 3.5, 8.0, 61.0, 65.36, 12.0, 5.6, 7.11,
+            27.0, 9.53, 549.0, 2.23, 17.31, 4.25, 2.13, 83.0, 7.0, 102.4,
+            53.21, 3.42, 0.21, 70.02, 819.4, 6173.0, 4.25, 19.8, 17.35, 5.768};
 
-        // Menambahkan elemen-elemen ke dalam antrian
-        data.offer(91.35);
-        data.offer(4.72);
-        data.offer(26.0);
-        data.offer(3.5);
-        data.offer(8.0);
-        data.offer(61.0);
-        data.offer(65.36);
-        data.offer(12.0);
-        data.offer(5.6);
-        data.offer(7.11);
-        data.offer(27.0);
-        data.offer(9.53);
-        data.offer(549.0);
-        data.offer(2.23);
-        data.offer(4.25);
-        data.offer(2.13);
-        data.offer(83.0);
-        data.offer(7.0);
-        data.offer(102.4);
-        data.offer(53.21);
-        data.offer(3.42);
-        data.offer(0.21);
-        data.offer(70.02);
-        data.offer(819.4);
-        data.offer(6173.0);
-        data.offer(4.25);
-        data.offer(19.8);
-        data.offer(17.35);
-        data.offer(5.768);
-
-        // Inisialisasi variabel untuk nilai minimum, maksimum, dan jumlah
+        // Variabel untuk menyimpan nilai minimum, maksimum, dan jumlah
         double min = Double.MAX_VALUE;
         double max = Double.MIN_VALUE;
         double sum = 0;
-
-        // Menyimpan ukuran antrian sebelum mulai mengeluarkan elemen-elemennya
-        int size = data.size(); 
-
-        // Mengambil dan memproses setiap elemen dari antrian sampai antrian kosong
-        while (!data.isEmpty()) {
-            double value = data.poll(); // Mengambil elemen depan dari antrian
-
-            // Memperbarui nilai minimum jika nilai yang diambil lebih kecil dari nilai minimum sebelumnya
+        
+        // Memasukkan nilai ke dalam Queue
+        for (int i = 0; i < nilai.length; i++) {
+            data.offer(nilai[i]);
+        }
+        
+        // Menghitung nilai minimum, maksimum, dan jumlah dari nilai dalam Queue
+        for (double value : data) {
             if (value < min) {
                 min = value;
             }
-            // Memperbarui nilai maksimum jika nilai yang diambil lebih besar dari nilai maksimum sebelumnya
             if (value > max) {
                 max = value;
             }
-            sum += value; // Menambahkan nilai yang diambil ke dalam jumlah
+            sum += value;
         }
+        
+        // Menghitung rata-rata nilai dalam Queue
+        double average = sum / data.size();
 
-        // Menghitung rata-rata dari semua nilai dalam antrian
-        double average = sum / size; 
-
-        // Menampilkan hasil
+        // Menampilkan hasil perhitungan
         System.out.println("Min     : " + min);
         System.out.println("Max     : " + max);
         System.out.println("Sum     : " + sum);

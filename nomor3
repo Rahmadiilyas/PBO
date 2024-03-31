@@ -1,0 +1,36 @@
+
+package praktikum4;
+
+public class nomor3 {
+    public class innerClass1{
+        private int nilai;
+        
+        innerClass1(int nilai){
+            this.nilai=nilai;
+        }
+        public void show(){
+            System.out.println("Nilai didalam innerClass 1 = "+nilai);
+        }
+    }
+    
+    public class innerClass2{
+        private int nilai;
+        
+        innerClass2(int nilai){
+             this.nilai=nilai;
+        }
+        
+        public void show(){
+            System.out.println("Nilai didalam innerClass 1 = "+nilai);
+        }
+    }
+    public static void main(String[] args) {
+        nomor3 outher = new nomor3();
+        nomor3.innerClass1 inner1 = outher.new innerClass1(10);
+        nomor3.innerClass2 inner2 = outher.new innerClass2(20);
+    
+        inner1.show();
+        inner2.show();
+    }
+    }
+

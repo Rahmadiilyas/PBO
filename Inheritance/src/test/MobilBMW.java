@@ -13,21 +13,11 @@ public class MobilBMW extends Mobil implements MyInterface{
         this.jenis = jenis;
     }
 
-    // Overloading constructor
-    public MobilBMW() {
-        this.jenis = "Seri 7";
-    }
+   
 
-    // Getter dan setter
-    public String getJenis() {
-        return jenis;
-    }
-
-    public void setJenis(String jenis) {
-        this.jenis = jenis;
-    }
     
     // Overriding
+    @Override
     public void info2() {
         System.out.println("Ini adalah sebuah mobil BMW");
         System.out.println("Jenis: " + jenis);
@@ -35,7 +25,8 @@ public class MobilBMW extends Mobil implements MyInterface{
 
     @Override
     public String getStringInfoState() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+        String info = "Lulus Pbo";
+        return info;
 }
 
+}

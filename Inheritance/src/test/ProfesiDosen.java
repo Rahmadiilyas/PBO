@@ -12,20 +12,6 @@ public class ProfesiDosen extends Profesi implements MyInterface{
         this.jenis = jenis;
     }
 
-    // Overloading constructor
-    public ProfesiDosen() {
-        this.jenis = "Dosen Tetap";
-    }
-
-    // Getter dan setter
-    public String getJenis() {
-        return jenis;
-    }
-
-    public void setJenis(String jenis) {
-        this.jenis = jenis;
-    }
-    
     // Overriding
     public void info5() {
         System.out.println("Ini adalah sebuah profesi dosen");
@@ -34,7 +20,8 @@ public class ProfesiDosen extends Profesi implements MyInterface{
 
     @Override
     public String getStringInfoState() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+        String info = "Lulus Pbo";
+        return info;
+         }
 }
 

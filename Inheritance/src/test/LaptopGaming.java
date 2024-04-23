@@ -13,20 +13,7 @@ public class LaptopGaming extends Laptop  implements MyInterface{
         this.jenis = jenis;
     }
 
-    // Overloading constructor
-    public LaptopGaming() {
-        this.jenis = "ROG";
-    }
 
-    // Getter dan setter
-    public String getJenis() {
-        return jenis;
-    }
-
-    public void setJenis(String jenis) {
-        this.jenis = jenis;
-    }
-    
     // Overriding
     public void show4() {
         System.out.println("Ini adalah sebuah laptop gaming");
@@ -35,6 +22,7 @@ public class LaptopGaming extends Laptop  implements MyInterface{
 
     @Override
     public String getStringInfoState() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String info = "Lulus Pbo";
+        return info;
     }
 }

@@ -12,29 +12,19 @@ public class BangunanRumah extends bangunan implements MyInterface{
         this.jenis = jenis;
     }
 
-    // Overloading constructor
-    public BangunanRumah() {
-        this.jenis = "Kayu";
+    public void infoBangunan(){
+         System.out.println("ini adalah superclass bangunan");
     }
-
-    // Getter dan setter
-    public String getJenis() {
-        return jenis;
-    }
-
-    public void setJenis(String jenis) {
-        this.jenis = jenis;
-    }
-    
     // Overriding
-    public void infoBangunan() {
+    public void show() {
         System.out.println("Ini adalah sebuah rumah");
         System.out.println("Jenis: " + jenis);
     }
 
     @Override
     public String getStringInfoState() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       String info = "Lulus Pbo";
+       return info;
     }
 }
 

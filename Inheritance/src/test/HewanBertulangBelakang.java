@@ -13,19 +13,6 @@ public class HewanBertulangBelakang extends Hewan implements MyInterface{
         this.jenis = jenis;
     }
 
-    // Overloading constructor
-    public HewanBertulangBelakang() {
-        this.jenis = "Kucing";
-    }
-
-    // Getter dan setter
-    public String getJenis() {
-        return jenis;
-    }
-
-    public void setJenis(String jenis) {
-        this.jenis = jenis;
-    }
     
     // Overriding
     public void show1() {
@@ -35,7 +22,8 @@ public class HewanBertulangBelakang extends Hewan implements MyInterface{
 
     @Override
     public String getStringInfoState() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       String info = "Lulus Pbo";
+        return info;
     }
 }
 

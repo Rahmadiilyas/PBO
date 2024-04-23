@@ -12,19 +12,6 @@ public class MotorNinja extends Motor implements MyInterface{
         this.jenis = jenis;
     }
 
-    // Overloading constructor
-    public MotorNinja() {
-        this.jenis = "Sport Bike";
-    }
-
-    // Getter dan setter
-    public String getJenis() {
-        return jenis;
-    }
-
-    public void setJenis(String jenis) {
-        this.jenis = jenis;
-    }
     
     // Overriding
     public void info4() {
@@ -34,7 +21,8 @@ public class MotorNinja extends Motor implements MyInterface{
 
     @Override
     public String getStringInfoState() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String info = "Lulus Pbo";
+        return info;
     }
 }
 

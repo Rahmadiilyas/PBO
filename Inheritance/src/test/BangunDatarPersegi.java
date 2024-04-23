@@ -11,35 +11,17 @@ public class BangunDatarPersegi extends BangunDatar implements MyInterface{
         this.sisi = sisi;
     }
 
-    // Overloading Constructor
-    public BangunDatarPersegi() {
-        this.sisi = 0;
-    }
-
-    // Getter dan Setter
-    public double getSisi() {
-        return sisi;
-    }
-
-    public void setSisi(double sisi) {
-        this.sisi = sisi;
-    }
-
     public double hitungLuas() {
         return sisi * sisi;
     }
-
-    public double hitungKeliling() {
-        return 4 * sisi;
-    }
-
     public void info() {
         System.out.println("Ini adalah superclass bangun datar");
     }
 
     @Override
     public String getStringInfoState() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String info = "Lulus Pbo";
+        return info;
     }
 }
 
